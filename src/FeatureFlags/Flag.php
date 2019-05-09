@@ -3,16 +3,18 @@ namespace FeatureFlags;
 class Flag {
    private $name;
    
-   public function __construct(string $name) {
+   private $value;
+   
+   public function __construct(string $name, $value) {
     $this->name = $name;
    }
    
    public function inGroup(string $group): bool {
-    return true;
+    return $this->value;
    }
    
        public function __toString()
     {
-        return true;
+        return $this->value;
     }
 }
