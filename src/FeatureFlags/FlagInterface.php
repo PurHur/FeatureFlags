@@ -1,3 +1,3 @@
 <?php
 namespace FeatureFlags;
-interface FlagInterface extends \IteratorAggregate  {}
+interface FlagInterface {}
