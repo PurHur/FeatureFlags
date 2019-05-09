@@ -10,4 +10,9 @@ class Flag {
    public function inGroup(string $group): bool {
     return true;
    }
+   
+       public function __toString()
+    {
+        return true;
+    }
 }
