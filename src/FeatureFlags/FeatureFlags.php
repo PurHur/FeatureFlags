@@ -38,7 +38,7 @@ class FeatureFlags {
      * @return FlagInterface
      */
     public function get(string $flag): FlagInterface {
-        return $this->flagConfiguration;
+        return $this->flagConfiguration[$flag];
     }
     
     /**
