@@ -31,7 +31,7 @@ class FeatureFlagsTest extends \PHPUnit\Framework\TestCase {
     }
     
     public function testIsInGroupWithArrayAccess() {
-        $this->assertEquals(true, $this->featureFlags['test_feature']->inGroup('rndB'));
+        $this->assertEquals(true, $this->featureFlags->get('test_feature')->inGroup('rndB'));
     }
 
 }
