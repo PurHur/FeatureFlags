@@ -7,6 +7,7 @@ class Flag implements FlagInterface {
    
    public function __construct(string $name, $value) {
     $this->name = $name;
+      $this->value = $value;
    }
    
    public function inGroup(string $group): bool {
