@@ -35,9 +35,9 @@ class FeatureFlags {
 
     /**
      * @param string $flag
-     * @return FlagConfigurationInterface
+     * @return FlagInterface
      */
-    public function getFlagData(string $flag): FlagConfigurationInterface {
+    public function getFlagData(string $flag): FlagInterface {
         return $this->flagConfiguration[$flag];
     }
 
