@@ -15,7 +15,7 @@ class ArrayFlagConfiguration extends \ArrayObject implements FlagConfigurationIn
     public function __construct(array $flagConfiguration) {
         $this->flagConfiguration = [];
         foreach($flagConfiguration as $flag => $value) {
-           $this->flagConfiguration[$flag] = new Flag($name, $value); 
+           $this->flagConfiguration[$flag] = new Flag($flag, $value); 
         }
     }
 
