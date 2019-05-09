@@ -37,8 +37,8 @@ class FeatureFlags {
      * @param string $flag
      * @return FlagInterface
      */
-    public function get(string $flag): bool {
-        return (bool)$this->flagConfiguration;
+    public function get(string $flag): FlagInterface {
+        return $this->flagConfiguration;
     }
     
     /**
