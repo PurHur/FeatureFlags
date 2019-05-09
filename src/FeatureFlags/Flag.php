@@ -1,6 +1,6 @@
 <?php
 namespace FeatureFlags;
-class Flag {
+class Flag implements FlagInterface {
    private $name;
    
    private $value;
