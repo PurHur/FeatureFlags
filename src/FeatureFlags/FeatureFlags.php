@@ -32,7 +32,15 @@ class FeatureFlags {
     public function isInactive(string $flag): bool {
         return !(bool)$this->flagConfiguration[$flag];
     }
-
+    
+    /**
+     * @param string $flag
+     * @return FlagInterface
+     */
+    public function get(string $flag): bool {
+        return (bool)$this->flagConfiguration;
+    }
+    
     /**
      * @param string $flag
      * @return FlagInterface
