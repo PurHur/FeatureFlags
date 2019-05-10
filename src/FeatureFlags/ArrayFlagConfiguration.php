@@ -46,11 +46,4 @@ class ArrayFlagConfiguration extends ArrayObject implements FlagConfigurationInt
         $this->flagConfiguration[$offset] = $value;
     }
 
-    /**
-     * @return array|\ArrayIterator|\Traversable
-     */
-    public function getIterator () {
-        return $this->flagConfiguration;
-    }
-
 }
