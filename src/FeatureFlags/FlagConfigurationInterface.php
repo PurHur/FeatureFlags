@@ -1,6 +1,10 @@
 <?php
+
 namespace FeatureFlags;
 
-interface FlagConfigurationInterface extends \IteratorAggregate  {
+use IteratorAggregate;
 
+interface FlagConfigurationInterface extends IteratorAggregate
+{
+    public getIterator ( void ) : Traversable
 }

@@ -1,7 +1,11 @@
 <?php
+
 namespace FeatureFlags;
 
 
-class MissingFlagException extends \InvalidArgumentException {
+use InvalidArgumentException;
+
+class MissingFlagException extends InvalidArgumentException
+{
 
 }

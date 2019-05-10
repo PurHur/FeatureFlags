@@ -2,8 +2,8 @@
 
 namespace FeatureFlags;
 
-
-class FeatureFlags {
+class FeatureFlags
+{
 
     /**
      * @var FlagConfigurationInterface
@@ -13,7 +13,8 @@ class FeatureFlags {
     /**
      * @param FlagConfigurationInterface $flagConfiguration
      */
-    public function __construct(FlagConfigurationInterface $flagConfiguration) {
+    public function __construct(FlagConfigurationInterface $flagConfiguration)
+    {
         $this->flagConfiguration = $flagConfiguration;
     }
 
@@ -21,31 +22,35 @@ class FeatureFlags {
      * @param string $flag
      * @return bool
      */
-    public function isActive(string $flag): bool {
-        return (bool)$this->flagConfiguration[$flag];
+    public function isActive(string $flag): bool
+    {
+        return $this->flagConfiguration[$flag]->isActive();
     }
 
     /**
      * @param string $flag
      * @return bool
      */
-    public function isInactive(string $flag): bool {
-        return !(bool)$this->flagConfiguration[$flag];
+    public function isInactive(string $flag): bool
+    {
+        return $this->flagConfiguration[$flag]->isInactive();
     }
-    
+
     /**
      * @param string $flag
      * @return FlagInterface
      */
-    public function get(string $flag): FlagInterface {
+    public function get(string $flag): FlagInterface
+    {
         return $this->flagConfiguration[$flag];
     }
-    
+
     /**
      * @param string $flag
      * @return FlagInterface
      */
-    public function getFlagData(string $flag): FlagInterface {
+    public function getFlagData(string $flag): FlagInterface
+    {
         return $this->flagConfiguration[$flag];
     }
 

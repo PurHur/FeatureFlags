@@ -1,3 +1,8 @@
 <?php
+
 namespace FeatureFlags;
-interface FlagInterface {}
+
+interface FlagInterface
+{
+
+}
