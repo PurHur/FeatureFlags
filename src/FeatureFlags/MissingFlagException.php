@@ -2,6 +2,6 @@
 namespace FeatureFlags;
 
 
-class MissingFlagException extends \Exception {
+class MissingFlagException extends \InvalidArgumentException {
 
 }

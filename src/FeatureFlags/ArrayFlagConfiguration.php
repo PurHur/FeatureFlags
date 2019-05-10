@@ -13,7 +13,10 @@ class ArrayFlagConfiguration extends \ArrayObject implements FlagConfigurationIn
      * @param array $flagConfiguration
      */
     public function __construct(array $flagConfiguration) {
-        $this->flagConfiguration = $flagConfiguration;
+        $this->flagConfiguration = [];
+        foreach($flagConfiguration as $flag => $value) {
+           $this->flagConfiguration[$flag] = new Flag($flag, $value); 
+        }
     }
 
     public function offsetGet ( $offset ){
