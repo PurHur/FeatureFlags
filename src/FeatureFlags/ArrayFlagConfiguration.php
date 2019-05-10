@@ -27,7 +27,6 @@ class ArrayFlagConfiguration extends ArrayObject implements FlagConfigurationInt
     /*
      * ArrayObject implementation
      */
-
     public function offsetGet($offset)
     {
         if (!$this->offsetExists($offset)) {
