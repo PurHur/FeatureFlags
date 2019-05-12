@@ -15,6 +15,7 @@ class Flag implements FlagInterface
      */
     private $value;
 
+
     /**
      * Flag constructor.
      * @param string $name
@@ -50,5 +51,13 @@ class Flag implements FlagInterface
     public function isInactive(): bool
     {
         return !(bool)$this->value;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name;
     }
 }

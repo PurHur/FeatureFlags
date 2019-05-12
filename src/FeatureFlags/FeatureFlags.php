@@ -11,6 +11,11 @@ class FeatureFlags
     private $flagConfiguration;
 
     /**
+     * @var
+     */
+    private $logger;
+
+    /**
      * @param FlagConfigurationInterface $flagConfiguration
      */
     public function __construct(FlagConfigurationInterface $flagConfiguration)
@@ -52,6 +57,10 @@ class FeatureFlags
     public function getFlagData(string $flag): FlagInterface
     {
         return $this->flagConfiguration[$flag];
+    }
+
+    public function setLogger(LoggerInterface $logger) {
+        $this->logger = $logger;
     }
 
 }
