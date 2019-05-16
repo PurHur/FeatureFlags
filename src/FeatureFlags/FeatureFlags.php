@@ -50,15 +50,6 @@ class FeatureFlags
         return $this->flagConfiguration[$flag];
     }
 
-    /**
-     * @param string $flag
-     * @return FlagInterface
-     */
-    public function getFlagData(string $flag): FlagInterface
-    {
-        return $this->flagConfiguration[$flag];
-    }
-
     public function setLogger(LoggerInterface $logger) {
         $this->logger = $logger;
     }
