@@ -28,6 +28,16 @@ class FeatureFlagsTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(true, $this->featureFlags->isInactive('test_indev_feature'));
     }
 
+    public function testIsActiveOnFlag()
+    {
+        $this->assertEquals(true, $this->featureFlags->get('test_feature')->isActive('test_feature'));
+    }
+
+    public function testIsInactiveOnFlag()
+    {
+        $this->assertEquals(true, $this->featureFlags->get('test_indev_feature')->isInactive('test_indev_feature'));
+    }
+
     public function testIsInGroup()
     {
         $this->assertEquals(true, $this->featureFlags->get('test_feature')->inGroup('ceo'));
