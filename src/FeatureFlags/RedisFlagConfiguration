@@ -1,0 +1,36 @@
+<?php
+
+namespace FeatureFlags;
+
+class RedisFlagConfiguration extends ArrayObject implements FlagConfigurationInterface
+{
+
+
+    /**
+     * RedisFlagConfiguration constructor.
+     * @param Redis $redis
+     */
+    public function __construct(array $redis)
+    {
+      $this->redis = $redis;
+    }
+
+    /*
+     * minimal ArrayObject implementation
+     */
+    public function offsetGet($offset)
+    {
+        // @todo
+    }
+
+    public function offsetExists($offset)
+    {
+        // @todo
+    }
+
+    public function offsetSet($offset, $value)
+    {
+        // @todo
+    }
+
+}
